@@ -1,0 +1,26 @@
+{
+  "name": "wasm-runtime",
+  "version": "0.0.1",
+  "description": "The wasm compiler & runtime for litespeed, written in AssemblyScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run asbuild",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "node tests"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://github.com/lite-speed/wasm-runtime"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "^0.18.4"
+  }
+}
