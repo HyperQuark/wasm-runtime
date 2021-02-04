@@ -1,0 +1,4 @@
+{
+  "extends": "../assembly.json",
+  "include": ["./**/*.ts"]
+}
